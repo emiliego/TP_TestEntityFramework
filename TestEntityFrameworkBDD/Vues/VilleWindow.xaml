@@ -1,0 +1,90 @@
+﻿<Window x:Class="TestEntityFrameworkBDD.Vues.VilleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestEntityFrameworkBDD.Vues"
+        mc:Ignorable="d"
+        Title="VilleWindow" Height="300" Width="300">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="100*"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Children>
+
+            <!--Grid pour le libellé-->
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.Children>
+                    <TextBlock x:Name="TextBlockLibelle" Grid.Column="0" Grid.Row="0" 
+                               Text="Libellé : "></TextBlock>
+                    <TextBox x:Name="TextBoxLibelle" Grid.Column="1" Grid.Row="0" 
+                             Text="{Binding Libelle}"></TextBox>
+                </Grid.Children>
+            </Grid>
+
+            <!--Grid pour le code postal-->
+            <Grid Grid.Column="1" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.Children>
+                    <TextBlock x:Name="TextBlockCodePostal" Grid.Column="0" Grid.Row="0" Text="Code postal : "></TextBlock>
+                    <TextBox x:Name="TextBoxCodePostal" Grid.Column="1" Grid.Row="0" Text="{Binding Code_Postal}"></TextBox>
+                </Grid.Children>
+            </Grid>
+
+            <!--Grid pour les boutons ok/annuler-->
+            <Grid Grid.Column="1" Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"></ColumnDefinition>
+                    <ColumnDefinition Width="50*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.Children>
+                    <Button Grid.Column="0" 
+                            Content="Valider" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" 
+                            Height="50" 
+                            Width="120"
+                            x:Name="ButtonValider"
+                            Click="ButtonValider_Click"/>
+                    <Button Grid.Column="1" 
+                            Content="Annuler" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" 
+                            Height="50" 
+                            Width="120"
+                            x:Name="ButtonCancel"
+                            Click="ButtonCancel_Click"></Button>
+                </Grid.Children>
+            </Grid>
+
+        </Grid.Children>
+    </Grid>
+</Window>

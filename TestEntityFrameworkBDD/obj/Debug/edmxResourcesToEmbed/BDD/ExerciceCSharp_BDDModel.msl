@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExerciceCSharp_BDDModelStoreContainer" CdmEntityContainer="ExerciceCSharp_BDDEntities">
+    <EntitySetMapping Name="Civilite">
+      <EntityTypeMapping TypeName="ExerciceCSharp_BDDModel.Civilite">
+        <MappingFragment StoreEntitySet="Civilite">
+          <ScalarProperty Name="Identifiant" ColumnName="Identifiant" />
+          <ScalarProperty Name="Libelle_Long" ColumnName="Libelle_Long" />
+          <ScalarProperty Name="Libelle_Court" ColumnName="Libelle_Court" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personne">
+      <EntityTypeMapping TypeName="ExerciceCSharp_BDDModel.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="Identifiant" ColumnName="Identifiant" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Civilite" ColumnName="Civilite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ville">
+      <EntityTypeMapping TypeName="ExerciceCSharp_BDDModel.Ville">
+        <MappingFragment StoreEntitySet="Ville">
+          <ScalarProperty Name="Identifiant" ColumnName="Identifiant" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Code_Postal" ColumnName="Code_Postal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
